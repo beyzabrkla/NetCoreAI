@@ -1,0 +1,22 @@
+﻿@model NetCoreAI.Project02_APIConsumeUI.DTOs.CreateCustomerDTO
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<form method="post">
+<div>
+    <br /><br />
+    <label> Müşteri Adı</label>
+    <input  type="text" asp-for="customerName" class="form-control"/>
+    <br />
+    <label> Müşteri Soyadı</label>
+    <input type="text" asp-for="customerSurname" class="form-control" />
+    <br />
+    <label> Müşteri </label>
+    <input type="text" asp-for="customerBalance" class="form-control" />
+    <br />
+    <button class="btn btn-success">Müşteri Ekle</button>
+</div>
+</form>

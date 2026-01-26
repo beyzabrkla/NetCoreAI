@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="NetCoreAI.Project01_APIDemo/NetCoreAI.Project01_APIDemo.csproj" />
+  <Project Path="NetCoreAI.Project02_APIConsumeUI/NetCoreAI.Project02_APIConsumeUI.csproj" />
+  <Project Path="NetCoreAI.Project03_RapidAPI/NetCoreAI.Project03_RapidAPI.csproj" Id="d5f966af-96e7-418e-9f7e-033dcf569fee" />
+</Solution>
