@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NetCoreAI.Project02_APIConsumeUI\**" />
+    <Compile Remove="NetCoreAI.Project03_RapidAPI\**" />
+    <Compile Remove="NetCoreAI.Project04_GeminiAPIChat\**" />
+    <Content Remove="NetCoreAI.Project02_APIConsumeUI\**" />
+    <Content Remove="NetCoreAI.Project03_RapidAPI\**" />
+    <Content Remove="NetCoreAI.Project04_GeminiAPIChat\**" />
+    <EmbeddedResource Remove="NetCoreAI.Project02_APIConsumeUI\**" />
+    <EmbeddedResource Remove="NetCoreAI.Project03_RapidAPI\**" />
+    <EmbeddedResource Remove="NetCoreAI.Project04_GeminiAPIChat\**" />
+    <None Remove="NetCoreAI.Project02_APIConsumeUI\**" />
+    <None Remove="NetCoreAI.Project03_RapidAPI\**" />
+    <None Remove="NetCoreAI.Project04_GeminiAPIChat\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.23" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.23">
       <PrivateAssets>all</PrivateAssets>
