@@ -4,5 +4,7 @@
   <Project Path="NetCoreAI.Project03_RapidAPI/NetCoreAI.Project03_RapidAPI.csproj" />
   <Project Path="NetCoreAI.Project04_GeminiAPIChat/NetCoreAI.Project04_GeminiAPIChat.csproj" />
   <Project Path="NetCoreAI.Project05_OpenWhisperAudioTranskript/NetCoreAI.Project05_OpenWhisperAudioTranskript.csproj" Id="d59ea2c0-ea65-4630-9894-d41934211782" />
-  <Project Path="NetCoreAI.Project06_DallEImageGeneration/NetCoreAI.Project06_HaggingFace.csproj" Id="8affa421-b8e6-4e74-be94-39a072b6a5af" />
+  <Project Path="NetCoreAI.Project06_HaggingFace/NetCoreAI.Project06_HaggingFace.csproj" />
+  <Project Path="NetCoreAI.Project07_TesseractOcr/NetCoreAI.Project07_TesseractOcr.csproj" Id="47b9dfe6-e246-40d9-9fb9-939d4248cfb9" />
+  <Project Path="NetCoreAI.Project08_OCR.Space/NetCoreAI.Project08_OCR.Space.csproj" />
 </Solution>
