@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq; // Bunu mutlaka ekle!
-using System.IO;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 class Program
 {
@@ -14,10 +9,9 @@ class Program
         Console.WriteLine("Resim yolunu giriniz:");
         string rawInput = Console.ReadLine();
 
-        // 1. ADIM: Görünmez karakterleri ve tırnakları kökten temizle
+        //Görünmez karakterleri ve tırnakları temizle
         string imagePath = new string(rawInput.Where(c => c < 128).ToArray()).Trim().Replace("\"", "");
 
-        // 2. ADIM: Dosyanın varlığını kod içinde kontrol et ve kullanıcıya bilgi ver
         if (!File.Exists(imagePath))
         {
             Console.WriteLine("\n--- HATA ---");

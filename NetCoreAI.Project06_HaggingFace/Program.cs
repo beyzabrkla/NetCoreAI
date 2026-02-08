@@ -4,18 +4,19 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 class Program
 {
+    // HATA ÇÖZÜMÜ: Yeni Router Adresi
+    private static readonly string modelUrl = "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell";
+    private static readonly string hfToken = "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";
+
     static async Task Main(string[] args)
     {
-        // 1. Hugging Face API Key (Token geçerli görünüyor)
-        string hfToken = "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";
+        Console.WriteLine("=== AI GÖRSEL OLUŞTURUCU (YENİ SİSTEM) ===");
 
-        // 2. En güncel ve stabil çalışan model URL'si
-        string modelUrl = "https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0";
-
-        Console.Write("Ne çizmemi istersiniz? : ");
+        Console.Write("\nNe çizmek istersiniz? (İngilizce): ");
         string prompt = Console.ReadLine();
 
         if (string.IsNullOrWhiteSpace(prompt)) return;
@@ -24,15 +25,13 @@ class Program
         {
             using (var client = new HttpClient())
             {
-                // Zaman aşımını uzatıyoruz çünkü görsel oluşturma vakit alır
-                client.Timeout = TimeSpan.FromMinutes(3);
+                client.Timeout = TimeSpan.FromMinutes(5);
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", hfToken);
 
-                Console.WriteLine("\n[1/2] Görsel oluşturuluyor (Bu işlem 10-60 saniye sürebilir)...");
-                Console.WriteLine("Not: Eğer model yüklü değilse ilk istek biraz uzun sürebilir.");
+                Console.WriteLine("\n[⌛] Yeni sistem üzerinden bağlanılıyor, lütfen bekleyin...");
 
-                // API'ye isteği JSON string olarak manuel gönderiyoruz
-                var jsonPayload = $"{{\"inputs\": \"{prompt}\"}}";
+                var payload = new { inputs = prompt };
+                string jsonPayload = JsonSerializer.Serialize(payload);
                 var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
 
                 var response = await client.PostAsync(modelUrl, content);
@@ -41,34 +40,32 @@ class Program
                 {
                     byte[] imageBytes = await response.Content.ReadAsByteArrayAsync();
 
-                    string dosyaAdi = "huggingface_cizim.png";
-                    await File.WriteAllBytesAsync(dosyaAdi, imageBytes);
+                    string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                    string fileName = $"AI_Cizim_{DateTime.Now:HHmmss}.png";
+                    string fullPath = Path.Combine(desktopPath, fileName);
 
-                    Console.WriteLine("\n[2/2] BAŞARILI!");
-                    Console.WriteLine($"Görsel kaydedildi: {Path.GetFullPath(dosyaAdi)}");
+                    await File.WriteAllBytesAsync(fullPath, imageBytes);
+
+                    Console.WriteLine("\n[✅] BAŞARIYLA ÇİZİLDİ!");
+                    Console.WriteLine("-------------------------------------------");
+                    Console.WriteLine($"Görsel Masaüstünde: {fileName}");
+                    Console.WriteLine("-------------------------------------------");
                 }
                 else
                 {
                     string error = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("\nHata oluştu: " + response.StatusCode);
-
-                    if (error.Contains("estimated_time"))
-                    {
-                        Console.WriteLine("Bilgi: Model şu an yükleniyor, lütfen 20 saniye sonra tekrar deneyin.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Detay: " + error);
-                    }
+                    Console.WriteLine("\n[!] Sunucu Hatası: " + response.StatusCode);
+                    // Eğer hata mesajı çok uzunsa (HTML gelirse) sadece ilk 100 karakteri yazdır
+                    Console.WriteLine("Hata Detayı: " + (error.Length > 100 ? error.Substring(0, 100) + "..." : error));
                 }
             }
         }
         catch (Exception ex)
         {
-            Console.WriteLine("\nBeklenmedik bir hata: " + ex.Message);
+            Console.WriteLine("\n[!] Program Hatası: " + ex.Message);
         }
 
-        Console.WriteLine("\nÇıkmak için bir tuşa basın...");
+        Console.WriteLine("\nKapatmak için bir tuşa basın...");
         Console.ReadKey();
     }
 }
