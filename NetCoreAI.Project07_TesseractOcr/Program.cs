@@ -7,7 +7,7 @@ class Program
         Console.Write("Karakter Okuması Yapılacak Resim Yolu: ");
         string inputPath = Console.ReadLine();
 
-        // 1. Adım: Dosya yolunu temizle (Görünmez karakterler ve tırnaklar)
+        // Dosya yolunu temizle (Görünmez karakterler ve tırnaklar)
         string imagePath = inputPath.Replace("\u202A", "")
                                      .Replace("\u202B", "")
                                      .Replace("\u202C", "")
@@ -15,7 +15,7 @@ class Program
                                      .Replace("\u202E", "")
                                      .Trim('\"', ' ', '?', '\u200B');
 
-        // 2. Adım: Fiziksel dosya kontrolü
+        // Fiziksel dosya kontrolü
         if (!File.Exists(imagePath))
         {
             Console.WriteLine($"\nHata: Dosya bulunamadı! Yol: {imagePath}");
@@ -31,7 +31,7 @@ class Program
         {
             using (var engine = new TesseractEngine(tessDataPath, "eng", EngineMode.Default))
             {
-                using (var img = Pix.LoadFromFile(imagePath)) //pix resimleri ocr işlemi(görüntü işleme) için uygun hale getiren bir ver yapısıdır
+                using (var img = Pix.LoadFromFile(imagePath)) //pix resimleri ocr işlemi(görüntü işleme) için uygun hale getiren bir veri yapısı
                 {
                     using (var page = engine.Process(img)) //page nesnesi, OCR işlemi sonucunda elde edilen metni temsil eder
                     {
@@ -53,7 +53,7 @@ class Program
         }
         catch (Exception ex)
         {
-            // Hata olursa sebebini detaylıca yazdırıyoruz
+            // Hata olursa sebebini yazdırıyoruz
             Console.WriteLine("OCR Hatası: " + ex.Message);
         }
 
