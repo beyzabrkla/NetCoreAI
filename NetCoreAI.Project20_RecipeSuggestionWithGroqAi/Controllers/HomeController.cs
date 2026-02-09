@@ -18,6 +18,7 @@ namespace NetCoreAI.Project20_RecipeSuggestionWithGroqAi.Controllers
             return View();
         }
 
+
         public IActionResult Privacy()
         {
             return View();
