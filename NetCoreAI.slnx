@@ -13,10 +13,10 @@
   <Project Path="NetCoreAI.Project12_SentimentAIApp/NetCoreAI.Project12_SentimentAIApp.csproj" Id="e8edeb02-16e0-4aed-ae58-df1e21aa9e1e" />
   <Project Path="NetCoreAI.Project13_SentimentWithDegreeAiApp/NetCoreAI.Project13_SentimentWithDegreeAiApp.csproj" Id="eb79cde9-dabf-46a1-8d6d-a38e31157cdb" />
   <Project Path="NetCoreAI.Project14_ArticleSummarizeAI/NetCoreAI.Project14_ArticleSummarizeAI.csproj" Id="a59ac007-bb37-40d7-975b-e6b33f083d70" />
-  <Project Path="NetCoreAI.Project15_WebScraping/NetCoreAI.Project15_WebScrapingWithGroqAI.csproj" Id="3f412c18-60c7-416b-80a7-e1eb024b10ff" />
+  <Project Path="NetCoreAI.Project15_WebScrapingWithGroqAI/NetCoreAI.Project15_WebScrapingWithGroqAI.csproj" />
   <Project Path="NetCoreAI.Project16_PdfAnalyzeWithGroqAI/NetCoreAI.Project16_PdfAnalyzeWithGroqAI.csproj" Id="25a7596c-dad3-4c70-8fd0-9239e80423b5" />
   <Project Path="NetCoreAI.Project17_HuggingFaceImageDetection/NetCoreAI.Project17_HuggingFaceImageDetection.csproj" Id="4b45463c-b31a-42a3-a986-39ecc571127f" />
   <Project Path="NetCoreAI.Project18_HuggingAiNewsSummarizeWithRss/NetCoreAI.Project18_HuggingAiNewsSummarizeWithRss.csproj" Id="2f1f7267-5fb0-41c4-99e9-7c42ee626836" />
-  <Project Path="NetCoreAI.Project19_CreateStoryWithHuggingFaceAi/NetCoreAI.Project19_CreateStoryWithGroqAi.csproj" Id="bf386a15-d4af-4150-bbf6-f688cf16d2e5" />
+  <Project Path="NetCoreAI.Project19_CreateStoryWithGroqAi/NetCoreAI.Project19_CreateStoryWithGroqAi.csproj" />
   <Project Path="NetCoreAI.Project20_RecipeSuggestionWithGroqAi/NetCoreAI.Project20_RecipeSuggestionWithGroqAi.csproj" Id="4fc3b7bf-e426-4bcf-b868-c6eaf8466ffe" />
 </Solution>
