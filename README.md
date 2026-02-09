@@ -149,8 +149,7 @@ Fonksiyon: Karakter, mekan ve tür bilgilerini harmanlayarak giriş, gelişme ve
 
 ### 🍳 20. AI Chef: Recipe & Nutrition Assistant (Final Project)
 Bu proje, evdeki malzemelerle neler yapılabileceğini söyleyen veya istenen yemeğin tarifini adım adım veren bir mutfak asistanıdır.<br>
-Hibrit Mantık: Kullanıcı sadece malzeme listesi (Örn: "Yumurta, domates, peynir") girerse AI bir "Yaratıcı Mutfak" moduyla tarif üretir; yemek ismi girerse klasik bir tarif rehberine dönüşür.<br>
-Besin Bilinci: Sadece tarif vermekle kalmaz, aynı zamanda tahmini kalori hesabı ve profesyonel aşçı püf noktalarını da sunar.<br>
+Hibrit Mantık: Kullanıcı sadece malzeme listesi (Örn: "Yumurta, domates, peynir") girerse AI bir "Yaratıcı Mutfak" moduyla tarif üretir. 
 Teknik Yapı: En güncel llama-3.3-70b modeli kullanılarak gastronomi konusundaki detaylara hakimiyet artırılmıştır.<br>
 <img width="1167" height="760" alt="20-1 proje" src="https://github.com/user-attachments/assets/f1d816b9-7926-4da5-b04d-a67a0a749bd1" />
 <img width="1290" height="890" alt="20-2 proje" src="https://github.com/user-attachments/assets/58afe654-cdb1-4b08-b937-195aca68d0d4" />
