@@ -4,7 +4,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        string apiKey = "K88058163188957";
+        string apiKey = "";
 
         Console.WriteLine("Resim yolunu giriniz:");
         string rawInput = Console.ReadLine();

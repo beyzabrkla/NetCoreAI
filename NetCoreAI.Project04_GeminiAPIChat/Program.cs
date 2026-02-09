@@ -5,7 +5,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var apikey = "AIzaSyC1fwrB923We8BmmhuYCfQPir088iusBi8";
+        var apikey = "";
 
         Console.WriteLine("--- Gemini API (Official SDK) ---");
         Console.Write("Sorunuz: ");

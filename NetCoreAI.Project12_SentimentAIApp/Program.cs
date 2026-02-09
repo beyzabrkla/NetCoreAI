@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 class Program
 {
-    private static readonly string apikey = "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";
+    private static readonly string apikey = "";
 
     static async Task Main(string[] args) 
     {
