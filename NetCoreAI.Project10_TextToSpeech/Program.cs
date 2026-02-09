@@ -9,7 +9,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        string apiKey = "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".Trim();
+        string apiKey = "".Trim();
         string endpoint = "https://api.groq.com/openai/v1/chat/completions";
 
         Console.WriteLine("=== AI Sesli Çeviri Sistemi ===");

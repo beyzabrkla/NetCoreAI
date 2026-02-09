@@ -8,9 +8,8 @@ using System.Text.Json;
 
 class Program
 {
-    // HATA ÇÖZÜMÜ: Yeni Router Adresi
     private static readonly string modelUrl = "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell";
-    private static readonly string hfToken = "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";
+    private static readonly string hfToken = "";
 
     static async Task Main(string[] args)
     {

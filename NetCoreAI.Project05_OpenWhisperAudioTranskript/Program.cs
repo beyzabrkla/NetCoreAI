@@ -8,7 +8,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var apikey = "AIzaSyC1fwrB923We8BmmhuYCfQPir088iusBi8";
+        var apikey = "";
         string audioFilePath = "audio1.mp3";
 
         Console.WriteLine("--- Gemini API - Şarkı Analizi ---\n");

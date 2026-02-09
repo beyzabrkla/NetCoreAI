@@ -9,7 +9,7 @@ class Program
     static async Task Main(string[] args)
     {
         // Bilgileri tanımlıyoruz
-        string apiKey = "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".Trim(); //boşluklar varsa kaldırıyoruz
+        string apiKey = "".Trim(); //boşluklar varsa kaldırıyoruz
         string endpoint = "https://api.groq.com/openai/v1/chat/completions";
 
         Console.WriteLine("--- Groq AI Çeviri Paneli ---");
